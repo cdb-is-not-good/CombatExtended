@@ -208,6 +208,13 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_KineticAmmoPack"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>20</CarryBulk>
+		</value>
+	</Operation>
+
 <!-- === advanced gloves === -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Doberkin_GlovesAdvanced"]/statBases/ArmorRating_Sharp</xpath>
@@ -419,6 +426,20 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Backpack"]/statBases</xpath>
+		<value>
+			<Bulk>4</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Backpack"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>45</CarryBulk> <!--slightly higher than base backpack since it has slowdown and is a tiny bit more expensive.-->
+		</value>
+	</Operation>
+
 <!-- === Doberkin backpack S === -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Backpack_Small"]/statBases/ArmorRating_Sharp</xpath>
@@ -434,6 +455,20 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Backpack_Small"]/statBases</xpath>
+		<value>
+			<Bulk>3</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Backpack_Small"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>35</CarryBulk>
+		</value>
+	</Operation>
+
 <!-- === Doberkin waist pack === -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Waistpack"]/statBases/ArmorRating_Sharp</xpath>
@@ -446,6 +481,13 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Waistpack"]/statBases/ArmorRating_Blunt</xpath>
 		<value>
 			<ArmorRating_Blunt>4</ArmorRating_Blunt>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Waistpack"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>15</CarryBulk>
 		</value>
 	</Operation>
 
@@ -631,34 +673,67 @@
 
 <!-- === Heavy modular vest === -->
 	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_HeavyModularVest_A"]</xpath>
+		<value><statBases></statBases></value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_HeavyModularVest_A"]/statBases</xpath>
 		<value>
 			<ArmorRating_Sharp>0.075</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
 			<Bulk>5</Bulk>
-			<WornBulk>3</WornBulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_HeavyModularVest_A"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>25</CarryBulk>
 		</value>
 	</Operation>
 
 <!-- === Heavy modular vest T1 === -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_HeavyModularVest_B"]</xpath>
+		<value><statBases></statBases></value>
+	</Operation>
+
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_HeavyModularVest_B"]/statBases</xpath>
 		<value>
 			<ArmorRating_Sharp>0.075</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
 			<Bulk>5</Bulk>
-			<WornBulk>3</WornBulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_HeavyModularVest_B"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>25</CarryBulk>
 		</value>
 	</Operation>
 
 <!-- === Light modular vest === -->
 	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_LightModularVest"]</xpath>
+		<value><statBases></statBases></value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_LightModularVest"]/statBases</xpath>
 		<value>
-			<ArmorRating_Sharp>0.075</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-			<Bulk>5</Bulk>
-			<WornBulk>3</WornBulk>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<Bulk>3</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_LightModularVest"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>15</CarryBulk>
 		</value>
 	</Operation>
 
@@ -668,8 +743,14 @@
 		<value>
 			<ArmorRating_Sharp>0.075</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-			<Bulk>5</Bulk>
-			<WornBulk>3</WornBulk>
+			<Bulk>3</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_MagazinePouches"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>10</CarryBulk>
 		</value>
 	</Operation>
 
@@ -679,8 +760,14 @@
 		<value>
 			<ArmorRating_Sharp>0.075</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-			<Bulk>5</Bulk>
-			<WornBulk>3</WornBulk>
+			<Bulk>6</Bulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_MagazinePouches_WithFannyPack"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>20</CarryBulk>
 		</value>
 	</Operation>
 
@@ -703,7 +790,13 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_PoweredArmor"]/statBases</xpath>
 		<value>
 			<Bulk>10</Bulk>
-			<WornBulk>6</WornBulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_PoweredArmor"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>10</CarryBulk> <!--A lil bit of bulk capacity, as a treat. This is the first power armor rank you get and the doberkin have other things like heavy modular vest they can use to pump up those numbers. this is fine.-->
 		</value>
 	</Operation>
 
@@ -800,6 +893,13 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BatteryPack"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>20</CarryBulk>
+		</value>
+	</Operation>
+
 <!-- === SC jumpsuit === -->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_Jumpsuit"]/statBases/ArmorRating_Sharp</xpath>
@@ -873,7 +973,14 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_BodyArmor"]/statBases</xpath>
 		<value>
 			<Bulk>10</Bulk>
-			<WornBulk>6</WornBulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_BodyArmor"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>30</CarryBulk>
+
 		</value>
 	</Operation>
 
