@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- ==========  Clean-Up =============-->
+		<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[
+			defName="Gun_DKF_ComradeArms" or
+			defName="Gun_DKF_CommanderSidearm" or
+			defName="Gun_DKF_Reprimand" or
+			defName="Gun_DKF_Cluster" or
+			defName="Gun_DKF_Mauler" or
+			defName="Gun_DKF_Breaker" or
+			defName="Gun_DKF_AT_Rifle" or
+			defName="Gun_DEF_HeartBurn" or
+			defName="Gun_DEF_HellFire" or
+			defName="Gun_DKF_HMG" or
+			defName="Gun_DEF_Lamcer" or
+			defName="Gun_DEF_RedGlare"
+			]/verbs</xpath>
+	</Operation>
+
+	<!-- Remove vanilla weaponTags that might conflict -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[
+			defName="Gun_DKF_ComradeArms" or
+			defName="Gun_DKF_CommanderSidearm" or
+			defName="Gun_DKF_Reprimand" or
+			defName="Gun_DKF_Cluster" or
+			defName="Gun_DKF_Mauler" or
+			defName="Gun_DKF_Breaker" or
+			defName="Gun_DKF_AT_Rifle" or
+			defName="Gun_DEF_HeartBurn" or
+			defName="Gun_DEF_HellFire" or
+			defName="Gun_DKF_HMG" or
+			defName="Gun_DEF_Lamcer" or
+			defName="Gun_DEF_RedGlare"
+			]/weaponTags</xpath>
+	</Operation>
+	
+	<!-- ==========  Melee Tools =========== -->
+
+	<!-- Pistols -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+			defName="Gun_DKF_ComradeArms" or
+			defName="Gun_DKF_CommanderSidearm"
+			]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>grip</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>2</power>
+					<cooldownTime>1.54</cooldownTime>
+					<chanceFactor>1.5</chanceFactor>
+					<armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>muzzle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>2</power>
+					<cooldownTime>1.54</cooldownTime>
+					<armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<!-- Long guns-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+			defName="Gun_DKF_Reprimand" or
+			defName="Gun_DKF_Cluster" or
+			defName="Gun_DKF_Mauler" or
+			defName="Gun_DKF_Breaker" or
+			defName="Gun_DKF_AT_Rifle" or
+			defName="Gun_DEF_HeartBurn" or
+			defName="Gun_DEF_HellFire" or
+			defName="Gun_DKF_HMG" or
+			defName="Gun_DEF_Lamcer" or
+			defName="Gun_DEF_RedGlare"
+			]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>stock</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.55</cooldownTime>
+					<chanceFactor>1.5</chanceFactor>
+					<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>barrel</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>5</power>
+					<cooldownTime>2.02</cooldownTime>
+					<armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>muzzle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.55</cooldownTime>
+					<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<!-- ==========  Reprimand  =========== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_DKF_Reprimand</defName>
+		<statBases>
+			<Mass>4.4</Mass>
+			<RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+			<SightsEfficiency>1.25</SightsEfficiency>
+			<ShotSpread>0.1</ShotSpread>
+			<SwayFactor>1.5</SwayFactor>
+			<Bulk>5.1</Bulk>
+		</statBases>
+		<Properties>
+			<recoilAmount>2.00</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_50AE_FMJ</defaultProjectile>
+			<warmupTime>.45</warmupTime>
+			<range>28</range>
+			<burstShotCount>3</burstShotCount>
+			<ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+			<soundCast>Shot_DF_Reprimand</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>24</magazineSize>
+			<reloadTime>3.25</reloadTime>
+			<ammoSet>AmmoSet_50AE</ammoSet>
+		</AmmoUser>
+		<FireModes>
+			<aimedBurstShotCount>2</aimedBurstShotCount>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+			<aiAimMode>AimedShot</aiAimMode>
+		</FireModes>
+		<weaponTags>
+      		<li>DoberFirearms_KineticBasic</li>		
+			<li>CE_AI_Pistol</li>
+		</weaponTags>
+	</Operation>
+
+	<!-- ========== Cluster =========== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_DKF_Cluster</defName>
+		<statBases>
+			<SightsEfficiency>1.2</SightsEfficiency>
+			<ShotSpread>0.1</ShotSpread>
+			<SwayFactor>.95</SwayFactor>
+			<Bulk>11</Bulk>
+			<Mass>3.2</Mass>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+		</statBases>
+		<Properties>
+			<recoilAmount>1.85</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+			<warmupTime>0.3</warmupTime>
+			<range>17</range>
+			<soundCast>Shot_DF_Cluster</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>8</magazineSize>
+			<reloadTime>.5</reloadTime>
+			<reloadOneAtATime>true</reloadOneAtATime>
+			<ammoSet>AmmoSet_12Gauge</ammoSet>
+		</AmmoUser>
+		<FireModes>
+			<aiAimMode>Snapshot</aiAimMode>
+		</FireModes>
+        <weaponTags>
+            <li>CE_AI_AssaultWeapon</li>
+			<li>DoberFirearms_KineticBasic</li>
+        </weaponTags>
+	</Operation>
+
+	<!-- ==========  Comrade Arms  =========== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_DKF_ComradeArms</defName>
+		<statBases>
+			<SightsEfficiency>0.9</SightsEfficiency>
+			<ShotSpread>0.1</ShotSpread>
+			<SwayFactor>1.7</SwayFactor>
+			<Bulk>4</Bulk>
+			<Mass>2.5</Mass>
+			<RangedWeapon_Cooldown>0.52</RangedWeapon_Cooldown>
+		</statBases>
+		<Properties>
+			<recoilAmount>4.1</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_600NitroExpress_FMJ</defaultProjectile>
+			<warmupTime>0.4</warmupTime>
+			<range>23</range>
+			<soundCast>Shot_DF_ComradeArms</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>10</magazineSize>
+			<reloadTime>1.8</reloadTime>
+			<ammoSet>AmmoSet_600NitroExpress</ammoSet>
+		</AmmoUser>
+		<FireModes>
+			<aiAimMode>AimedShot</aiAimMode>
+		</FireModes>
+		<weaponTags>
+			<li>CE_AI_Pistol</li>
+			<li>CE_OneHandedWeapon</li>
+			<li>DoberFirearms_KineticBasic</li>
+	  		<li>Comrade</li>
+		</weaponTags>
+	</Operation>
+
+	<!-- ==========  Breaker  =========== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_DKF_Breaker</defName>
+			<statBases>
+				<SightsEfficiency>1.2</SightsEfficiency>
+				<ShotSpread>0.08</ShotSpread>
+				<SwayFactor>.71</SwayFactor>
+				<Bulk>4.5</Bulk>
+				<Mass>3</Mass>
+				<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+                <NightVisionEfficiency_Weapon>1</NightVisionEfficiency_Weapon>
+			</statBases>
+			<Properties>
+				<recoilAmount>1.58</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_Twin6mmSmartGyrojet_FMJ</defaultProjectile>
+				<warmupTime>0.6</warmupTime>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<range>45</range>
+				<soundCast>Shot_DF_Breaker</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</Properties>
+			<AmmoUser>
+				<magazineSize>25</magazineSize>
+				<reloadTime>3</reloadTime>
+				<ammoSet>AmmoSet_Twin6mmSmartGyrojet</ammoSet>
+			</AmmoUser>
+			<FireModes>
+				<aimedBurstShotCount>3</aimedBurstShotCount>
+				<aiAimMode>Snapshot</aiAimMode>
+			</FireModes>
+			<weaponTags>
+				<li>CE_AI_Rifle</li>
+				<li>DoberFirearms_KineticAdvanced</li>
+        	</weaponTags>
+	</Operation>
+
+
+	<!-- ==========  Mauler  =========== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_DKF_Mauler</defName>
+		<statBases>
+			<SightsEfficiency>1.25</SightsEfficiency>
+			<ShotSpread>0.05</ShotSpread>
+			<SwayFactor>1.22</SwayFactor>
+			<Bulk>13.25</Bulk>
+			<Mass>10.5</Mass>
+			<RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+		</statBases>
+		<Properties>
+			<recoilAmount>1.1</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_792x57mmMauser_FMJ</defaultProjectile>
+            <burstShotCount>8</burstShotCount>
+            <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+			<warmupTime>0.6</warmupTime>
+			<range>65</range>
+			<soundCast>Shot_DF_Mauler</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+            <recoilPattern>Mounted</recoilPattern>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>50</magazineSize>
+			<reloadTime>6</reloadTime>
+			<ammoSet>AmmoSet_792x57mmMauser</ammoSet>
+		</AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_Suppressive</li>
+            <li>Bipod_LMG</li>
+     		<li>DoberFirearms_KineticAdvanced_MG</li>
+        </weaponTags>
+	</Operation>
+
+	<!-- ==========  AT Rifle  =========== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_DKF_AT_Rifle</defName>
+		<statBases>
+			<SightsEfficiency>3.2</SightsEfficiency>
+			<ShotSpread>0.01</ShotSpread>
+			<SwayFactor>2.98</SwayFactor>
+			<Bulk>29</Bulk>
+			<Mass>34</Mass>
+			<RangedWeapon_Cooldown>1.1</RangedWeapon_Cooldown>
+		</statBases>
+		<Properties>
+			<recoilAmount>2.8</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_20x102mmNATO_AP</defaultProjectile>
+			<warmupTime>3.5</warmupTime>
+			<range>85</range>
+			<soundCast>Shot_DF_AT_Rifle</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>20</muzzleFlashScale>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>5</magazineSize>
+			<reloadTime>6</reloadTime>
+			<ammoSet>AmmoSet_20x102mmNATO</ammoSet>
+		</AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_SR</li>
+            <li>Bipod_ATR</li>
+			<li>DoberFirearms_KineticAdvanced_Sniper</li>
+        </weaponTags>
+	</Operation>
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="Gun_DKF_AT_Rifle"]/equippedStatOffsets/MoveSpeed</xpath>
+	</Operation>
+
+		<!-- ==========  Heart Burn  =========== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_DEF_HeartBurn</defName>
+		<statBases>
+			<SightsEfficiency>1.2</SightsEfficiency>
+			<ShotSpread>0.08</ShotSpread>
+			<SwayFactor>.71</SwayFactor>
+			<Bulk>4.5</Bulk>
+			<Mass>3</Mass>
+			<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+		</statBases>
+		<Properties>
+			<recoilAmount>1.1</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_Laser_BeamRepeater</defaultProjectile>
+            <burstShotCount>3</burstShotCount>
+            <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+			<warmupTime>0.8</warmupTime>
+			<range>55</range>
+			<soundCast>Shot_DF_HeartBurn</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>25</magazineSize>
+			<reloadTime>2.6</reloadTime>
+			<ammoSet>AmmoSet_BeamRepeater</ammoSet>
+		</AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_Rifle</li>
+        </weaponTags>
+	</Operation>
+
+		<!-- ==========  Hell Fire =========== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_DEF_HellFire</defName>
+		<statBases>
+			<SightsEfficiency>1.25</SightsEfficiency>
+			<ShotSpread>0.05</ShotSpread>
+			<SwayFactor>1.22</SwayFactor>
+			<Bulk>13.25</Bulk>
+			<Mass>10.5</Mass>
+			<RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+		</statBases>
+		<Properties>
+			<recoilAmount>1.1</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_Laser_BeamRepeater</defaultProjectile>
+            <burstShotCount>8</burstShotCount>
+            <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+			<warmupTime>0.6</warmupTime>
+			<range>65</range>
+			<soundCast>Shot_DF_HeartBurn</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+            <recoilPattern>Mounted</recoilPattern>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>50</magazineSize>
+			<reloadTime>6</reloadTime>
+			<ammoSet>AmmoSet_BeamRepeater</ammoSet>
+		</AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_Suppressive</li>
+            <li>Bipod_LMG</li>
+        </weaponTags>
+	</Operation>
+
+			<!-- ==========  DKF Smart HMG =========== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_DKF_HMG</defName>
+		<statBases>
+			<SightsEfficiency>1.20</SightsEfficiency>
+			<ShotSpread>0.05</ShotSpread>
+			<SwayFactor>2.5</SwayFactor>
+			<Bulk>7.50</Bulk>
+			<Mass>19.50</Mass>
+			<RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+			<NightVisionEfficiency_Weapon>1</NightVisionEfficiency_Weapon>
+		</statBases>
+		<Properties>
+			<recoilAmount>1.1</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_12mmSmartGyrojet_FMJ</defaultProjectile>
+            <burstShotCount>5</burstShotCount>
+            <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+			<warmupTime>0.6</warmupTime>
+			<range>70</range>
+			<soundCast>Shot_DF_HMG</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+            <recoilPattern>Mounted</recoilPattern>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>50</magazineSize>
+			<reloadTime>7.25</reloadTime>
+			<ammoSet>AmmoSet_12mmSmartGyrojet</ammoSet>
+		</AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_Suppressive</li>
+        </weaponTags>
+	</Operation>
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="Gun_DKF_HMG"]/equippedStatOffsets/MoveSpeed</xpath>
+	</Operation>
+
+			<!-- ==========  DEF Lancer =========== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_DEF_Lamcer</defName> <!-- Typo present in the mod itself -->
+		<statBases>
+			<SightsEfficiency>2.10</SightsEfficiency>
+			<ShotSpread>0.01</ShotSpread>
+			<SwayFactor>1.25</SwayFactor>
+			<Bulk>5</Bulk>
+			<Mass>8.2</Mass>
+			<RangedWeapon_Cooldown>0.35</RangedWeapon_Cooldown>
+			<NightVisionEfficiency_Weapon>1</NightVisionEfficiency_Weapon>
+		</statBases>
+		<Properties>
+			<recoilAmount>0.01</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_Laser_Lancer</defaultProjectile>
+            <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+			<warmupTime>1.2</warmupTime>
+			<range>90</range>
+			<soundCast>Shot_DF_Lancer</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>6</magazineSize>
+			<reloadTime>4</reloadTime>
+			<ammoSet>AmmoSet_Lancer</ammoSet>
+		</AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_Rifle</li>
+        </weaponTags>
+	</Operation>
+
+			<!-- ==========  DEF Red Glare =========== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_DEF_RedGlare</defName>
+		<statBases>
+			<SightsEfficiency>1</SightsEfficiency>
+			<ShotSpread>0.15</ShotSpread>
+			<SwayFactor>1.2</SwayFactor>
+			<Bulk>4.5</Bulk>
+			<Mass>3</Mass>
+			<RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+		</statBases>
+		<Properties>
+			<recoilAmount>1.1</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_25x40mmGrenade_HE</defaultProjectile>
+			<warmupTime>0.6</warmupTime>
+			<range>40</range>
+			<soundCast>Shot_DF_Breaker</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>8</magazineSize>
+			<reloadTime>5</reloadTime>
+			<ammoSet>AmmoSet_25x40mmGrenade</ammoSet>
+		</AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+			<li>GunGrenadeLauncher</li>
+			<li>GunHeavy</li>
+			<li>CE_AI_AOE</li>
+        </weaponTags>
+	</Operation>
+
+		<!-- ==========  DEF Lancer =========== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_DEF_Lamcer</defName>
+		<statBases>
+			<SightsEfficiency>2.10</SightsEfficiency>
+			<ShotSpread>0.01</ShotSpread>
+			<SwayFactor>1.25</SwayFactor>
+			<Bulk>5</Bulk>
+			<Mass>8.2</Mass>
+			<RangedWeapon_Cooldown>0.35</RangedWeapon_Cooldown>
+			<NightVisionEfficiency_Weapon>1</NightVisionEfficiency_Weapon>
+		</statBases>
+		<Properties>
+			<recoilAmount>0.01</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_Laser_Lancer</defaultProjectile>
+            <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+			<warmupTime>1.2</warmupTime>
+			<range>90</range>
+			<soundCast>Shot_DF_Lancer</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>6</magazineSize>
+			<reloadTime>4</reloadTime>
+			<ammoSet>AmmoSet_Lancer</ammoSet>
+		</AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_Rifle</li>
+        </weaponTags>
+	</Operation>
+
+	<!-- ==========  Commander's Sidearm  =========== -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_DKF_CommanderSidearm</defName>
+		<statBases>
+			<SightsEfficiency>1.25</SightsEfficiency>
+			<ShotSpread>0.01</ShotSpread>
+			<SwayFactor>1.5</SwayFactor>
+			<Bulk>4</Bulk>
+			<Mass>2.5</Mass>
+			<RangedWeapon_Cooldown>0.52</RangedWeapon_Cooldown>
+		</statBases>
+		<Properties>
+			<recoilAmount>4.1</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_700NitroExpress_FMJ</defaultProjectile>
+			<warmupTime>0.4</warmupTime>
+			<range>25</range>
+			<soundCast>Shot_DF_ComradeArms</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<AmmoUser>
+			<magazineSize>9</magazineSize>
+			<reloadTime>2.1</reloadTime>
+			<ammoSet>AmmoSet_700NitroExpress</ammoSet>
+		</AmmoUser>
+		<FireModes>
+			<aiAimMode>AimedShot</aiAimMode>
+		</FireModes>
+		<weaponTags>
+			<li>CE_AI_Pistol</li>
+			<li>CE_OneHandedWeapon</li>
+		</weaponTags>
+	</Operation>
+</Patch>

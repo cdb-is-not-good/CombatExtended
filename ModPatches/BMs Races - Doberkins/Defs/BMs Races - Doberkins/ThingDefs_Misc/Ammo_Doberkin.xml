@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- ==================== Twin 6mm Smart Gyrojet ========================== -->
+	<ThingCategoryDef>
+		<defName>AmmoTwin6mmSmartGyrojet</defName>
+		<label>Twin 6mm Smart</label>
+		<parent>AmmoPistols</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_Twin6mmSmartGyrojet</defName>
+		<label>Twin 6mm Smart</label>
+		<ammoTypes>
+			<Ammo_Twin6mmSmartGyrojet_FMJ>Bullet_Twin6mmSmartGyrojet_FMJ</Ammo_Twin6mmSmartGyrojet_FMJ>
+			<Ammo_Twin6mmSmartGyrojet_AP>Bullet_Twin6mmSmartGyrojet_AP</Ammo_Twin6mmSmartGyrojet_AP>
+			<Ammo_Twin6mmSmartGyrojet_HP>Bullet_Twin6mmSmartGyrojet_HP</Ammo_Twin6mmSmartGyrojet_HP>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="Twin6mmSmartGyrojetBase" ParentName="SmallAmmoBase" Abstract="True">
+		<description>Overengineered pistol rounds that utilizes miniature rockets for propulsion instead of gunpowder. It features limited self guidance.</description>
+		<statBases>
+			<Mass>0.011</Mass>
+			<Bulk>0.014</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_FabricationBench</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoTwin6mmSmartGyrojet</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Twin6mmSmartGyrojetBase">
+		<defName>Ammo_Twin6mmSmartGyrojet_FMJ</defName>
+		<label>Twin 6mm Smart rocket (FMJ)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Pistol/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>FullMetalJacket</ammoClass>
+		<cookOffProjectile>Bullet_Twin6mmSmartGyrojet_FMJ</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Twin6mmSmartGyrojetBase">
+		<defName>Ammo_Twin6mmSmartGyrojet_AP</defName>
+		<label>Twin 6mm Smart rocket (AP)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Pistol/AP</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>ArmorPiercing</ammoClass>
+		<cookOffProjectile>Bullet_Twin6mmSmartGyrojet_AP</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Twin6mmSmartGyrojetBase">
+		<defName>Ammo_Twin6mmSmartGyrojet_HP</defName>
+		<label>Twin 6mm Smart rocket (HP)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Pistol/HP</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>HollowPoint</ammoClass>
+		<cookOffProjectile>Bullet_Twin6mmSmartGyrojet_HP</cookOffProjectile>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="BaseTwin6mmSmartGyrojetBullet" ParentName="Base45ACPBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>85</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseTwin6mmSmartGyrojetBullet">
+		<defName>Bullet_Twin6mmSmartGyrojet_FMJ</defName>
+		<label>Twin 6mm Smart bullet (FMJ)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>5</armorPenetrationSharp>
+			<armorPenetrationBlunt>18.4</armorPenetrationBlunt>
+			<pelletCount>2</pelletCount>
+			<spreadMult>.8</spreadMult>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseTwin6mmSmartGyrojetBullet">
+		<defName>Bullet_Twin6mmSmartGyrojet_AP</defName>
+		<label>Twin 6mm Smart bullet (AP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>7</damageAmountBase>
+			<armorPenetrationSharp>10</armorPenetrationSharp>
+			<armorPenetrationBlunt>18.4</armorPenetrationBlunt>
+			<pelletCount>2</pelletCount>
+			<spreadMult>.8</spreadMult>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseTwin6mmSmartGyrojetBullet">
+		<defName>Bullet_Twin6mmSmartGyrojet_HP</defName>
+		<label>Twin 6mm Smart bullet (HP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>13</damageAmountBase>
+			<armorPenetrationSharp>2.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>18.4</armorPenetrationBlunt>
+			<pelletCount>2</pelletCount>
+			<spreadMult>.8</spreadMult>
+		</projectile>
+	</ThingDef>
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_Twin6mmSmartGyrojet_FMJ</defName>
+		<label>make Twin 6mm Smart (FMJ) rocket x200</label>
+		<description>Craft 200 Twin 6mm Smart (FMJ) rockets.</description>
+		<jobString>Making Twin 6mm Smart (FMJ) rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Twin6mmSmartGyrojet_FMJ>200</Ammo_Twin6mmSmartGyrojet_FMJ>
+		</products>
+		<workAmount>2400</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_Twin6mmSmartGyrojet_AP</defName>
+		<label>make Twin 6mm Smart (AP) rocket x200</label>
+		<description>Craft 200 Twin 6mm Smart (AP) rockets.</description>
+		<jobString>Making Twin 6mm Smart (AP) rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Twin6mmSmartGyrojet_AP>200</Ammo_Twin6mmSmartGyrojet_AP>
+		</products>
+		<workAmount>2400</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_Twin6mmSmartGyrojet_HP</defName>
+		<label>make Twin 6mm Smart (HP) rocket x200</label>
+		<description>Craft 200 Twin 6mm Smart (HP) rockets.</description>
+		<jobString>Making Twin 6mm Smart (HP) rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Twin6mmSmartGyrojet_HP>200</Ammo_Twin6mmSmartGyrojet_HP>
+		</products>
+		<workAmount>2400</workAmount>
+	</RecipeDef>
+
+	<!-- ==================== 12mm Smart Gyrojet ========================== -->
+	<ThingCategoryDef>
+		<defName>Ammo12mmSmartGyrojet</defName>
+		<label>12mm Smart</label>
+		<parent>AmmoHighCaliber</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberHighCaliber</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_12mmSmartGyrojet</defName>
+		<label>12mm Smart</label>
+		<ammoTypes>
+			<Ammo_12mmSmartGyrojet_FMJ>Bullet_12mmSmartGyrojet_FMJ</Ammo_12mmSmartGyrojet_FMJ>
+			<Ammo_12mmSmartGyrojet_AP>Bullet_12mmSmartGyrojet_AP</Ammo_12mmSmartGyrojet_AP>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="12mmSmartGyrojetBase" ParentName="SmallAmmoBase" Abstract="True">
+		<description>Overengineered pistol rounds that utilizes miniature rockets for propulsion instead of gunpowder. It features limited self guidance.</description>
+		<statBases>
+			<Mass>0.022</Mass>
+			<Bulk>0.028</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_FabricationBench</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Ammo12mmSmartGyrojet</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="12mmSmartGyrojetBase">
+		<defName>Ammo_12mmSmartGyrojet_FMJ</defName>
+		<label>12mm Smart rocket (FMJ)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>FullMetalJacket</ammoClass>
+		<cookOffProjectile>Bullet_12mmSmartGyrojet_FMJ</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="12mmSmartGyrojetBase">
+		<defName>Ammo_12mmSmartGyrojet_AP</defName>
+		<label>12mm Smart rocket (AP)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/AP</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>ArmorPiercing</ammoClass>
+		<cookOffProjectile>Bullet_12mmSmartGyrojet_AP</cookOffProjectile>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="Base12mmSmartGyrojetBullet" ParentName="Base45ACPBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>105</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base12mmSmartGyrojetBullet">
+		<defName>Bullet_12mmSmartGyrojet_FMJ</defName>
+		<label>12mm Smart bullet (FMJ)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>15</damageAmountBase>
+			<armorPenetrationSharp>10</armorPenetrationSharp>
+			<armorPenetrationBlunt>30.4</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base12mmSmartGyrojetBullet">
+		<defName>Bullet_12mmSmartGyrojet_AP</defName>
+		<label>12mm Smart bullet (AP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>12</damageAmountBase>
+			<armorPenetrationSharp>20</armorPenetrationSharp>
+			<armorPenetrationBlunt>30.4</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_12mmSmartGyrojet_FMJ</defName>
+		<label>make 12mm Smart (FMJ) rocket x200</label>
+		<description>Craft 200 12mm Smart (FMJ) rockets.</description>
+		<jobString>Making 12mm Smart (FMJ) rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_12mmSmartGyrojet_FMJ>200</Ammo_12mmSmartGyrojet_FMJ>
+		</products>
+		<workAmount>2400</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_12mmSmartGyrojet_AP</defName>
+		<label>make 12mm Smart (AP) rocket x200</label>
+		<description>Craft 200 12mm Smart (AP) rockets.</description>
+		<jobString>Making 12mm Smart (AP) rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_12mmSmartGyrojet_AP>200</Ammo_12mmSmartGyrojet_AP>
+		</products>
+		<workAmount>2400</workAmount>
+	</RecipeDef>
+
+	<!-- ==================== Lancer ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_Lancer</defName>
+		<label>lancer charge</label>
+		<ammoTypes>
+			<Ammo_LaserChargePack>Bullet_Laser_Lancer</Ammo_LaserChargePack>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBullet">
+		<defName>Bullet_Laser_Lancer</defName>
+		<label>laser beam</label>
+		<textures>
+			<li>Things/Projectile/Laser_CE</li>
+		</textures>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef MayRequire="ludeon.rimworld.odyssey">BeamBypassShields</damageDef>
+			<damageAmountBase>30</damageAmountBase>
+		</projectile>
+	</ThingDef>
+	
+	<!-- ==================== 700 NitroExpress ========================== -->
+	<ThingCategoryDef>
+		<defName>Ammo700NitroExpress</defName>
+		<label>.700 Nitro Express</label>
+		<parent>AmmoHighCaliber</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberHighCaliber</iconPath>
+	</ThingCategoryDef>
+
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_700NitroExpress</defName>
+		<label>.700 Nitro Express</label>
+		<ammoTypes>
+			<Ammo_700NitroExpress_FMJ>Bullet_700NitroExpress_FMJ</Ammo_700NitroExpress_FMJ>
+			<Ammo_700NitroExpress_AP>Bullet_700NitroExpress_AP</Ammo_700NitroExpress_AP>
+			<Ammo_700NitroExpress_Incendiary>Bullet_700NitroExpress_Incendiary</Ammo_700NitroExpress_Incendiary>
+			<Ammo_700NitroExpress_HE>Bullet_700NitroExpress_HE</Ammo_700NitroExpress_HE>
+			<Ammo_700NitroExpress_Sabot>Bullet_700NitroExpress_Sabot</Ammo_700NitroExpress_Sabot>
+		</ammoTypes>
+		<similarTo>AmmoSet_RifleMagnum</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="Ammo700NitroExpressBase" ParentName="MediumAmmoBase" Abstract="True">
+		<description>Large and powerful cartridge designed to be fired at large game, like elephants or rhinoceroses.</description>
+		<statBases>
+			<Mass>0.108</Mass>
+			<Bulk>0.06</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Ammo700NitroExpress</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo700NitroExpressBase">
+		<defName>Ammo_700NitroExpress_FMJ</defName>
+		<label>.700 Nitro Express (FMJ)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>FullMetalJacket</ammoClass>
+		<cookOffProjectile>Bullet_700NitroExpress_FMJ</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo700NitroExpressBase">
+		<defName>Ammo_700NitroExpress_AP</defName>
+		<label>.700 Nitro Express (AP)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/AP</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>ArmorPiercing</ammoClass>
+		<cookOffProjectile>Bullet_700NitroExpress_AP</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo700NitroExpressBase">
+		<defName>Ammo_700NitroExpress_Incendiary</defName>
+		<label>.700 Nitro Express (AP-I)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>IncendiaryAP</ammoClass>
+		<generateAllowChance>0.65</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_700NitroExpress_Incendiary</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo700NitroExpressBase">
+		<defName>Ammo_700NitroExpress_HE</defName>
+		<label>.700 Nitro Express (AP-HE)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/HE</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>ExplosiveAP</ammoClass>
+		<generateAllowChance>0.65</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_700NitroExpress_HE</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo700NitroExpressBase">
+		<defName>Ammo_700NitroExpress_Sabot</defName>
+		<label>.700 Nitro Express (Sabot)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/Sabot</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.079</Mass>
+		</statBases>
+		<ammoClass>Sabot</ammoClass>
+		<generateAllowChance>0.65</generateAllowChance> <!-- Make advanced ammo types less common. -->
+		<cookOffProjectile>Bullet_700NitroExpress_Sabot</cookOffProjectile>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Name="Base700NitroExpressBullet" ParentName="BaseBulletCE" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>138</speed>
+			<dropsCasings>true</dropsCasings>
+			<casingMoteDefname>Fleck_RifleAmmoCasings_HighCal</casingMoteDefname>
+			<casingFilthDefname>Filth_RifleAmmoCasings_HighCal</casingFilthDefname>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base700NitroExpressBullet">
+		<defName>Bullet_700NitroExpress_FMJ</defName>
+		<label>.700 Nitro Express bullet (FMJ)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>44</damageAmountBase>
+			<armorPenetrationSharp>14</armorPenetrationSharp>
+			<armorPenetrationBlunt>230</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base700NitroExpressBullet">
+		<defName>Bullet_700NitroExpress_AP</defName>
+		<label>.700 Nitro Express bullet (AP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>28</damageAmountBase>
+			<armorPenetrationSharp>28</armorPenetrationSharp>
+			<armorPenetrationBlunt>230</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base700NitroExpressBullet">
+		<defName>Bullet_700NitroExpress_Incendiary</defName>
+		<label>.700 Nitro Express bullet (AP-I)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>28</damageAmountBase>
+			<armorPenetrationSharp>28</armorPenetrationSharp>
+			<armorPenetrationBlunt>230</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>17</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base700NitroExpressBullet">
+		<defName>Bullet_700NitroExpress_HE</defName>
+		<label>.700 Nitro Express bullet (AP-HE)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>44</damageAmountBase>
+			<armorPenetrationSharp>12</armorPenetrationSharp>
+			<armorPenetrationBlunt>230</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Bomb_Secondary</def>
+					<amount>23</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base700NitroExpressBullet">
+		<defName>Bullet_700NitroExpress_Sabot</defName>
+		<label>.700 Nitro Express bullet (Sabot)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>169</speed>
+			<damageAmountBase>21</damageAmountBase>
+			<armorPenetrationSharp>40</armorPenetrationSharp>
+			<armorPenetrationBlunt>250.5</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_700NitroExpress_FMJ</defName>
+		<label>make .700 Nitro Express (FMJ) cartridge x200</label>
+		<description>Craft 200 .700 Nitro Express (FMJ) cartridges.</description>
+		<jobString>Making .700 Nitro Express (FMJ) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>44</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_700NitroExpress_FMJ>200</Ammo_700NitroExpress_FMJ>
+		</products>
+		<workAmount>4400</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_700NitroExpress_AP</defName>
+		<label>make .700 Nitro Express (AP) cartridge x200</label>
+		<description>Craft 200 .700 Nitro Express (AP) cartridges.</description>
+		<jobString>Making .700 Nitro Express (AP) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>44</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_700NitroExpress_AP>200</Ammo_700NitroExpress_AP>
+		</products>
+		<workAmount>5280</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_700NitroExpress_Incendiary</defName>
+		<label>make .700 Nitro Express (AP-I) cartridge x200</label>
+		<description>Craft 200 .700 Nitro Express (AP-I) cartridges.</description>
+		<jobString>Making .700 Nitro Express (AP-I) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>44</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Prometheum</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Prometheum</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_700NitroExpress_Incendiary>200</Ammo_700NitroExpress_Incendiary>
+		</products>
+		<workAmount>6800</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_700NitroExpress_HE</defName>
+		<label>make .700 Nitro Express (AP-HE) cartridge x200</label>
+		<description>Craft 200 .700 Nitro Express (AP-HE) cartridges.</description>
+		<jobString>Making .700 Nitro Express (AP-HE) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>44</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>11</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>FSX</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_700NitroExpress_HE>200</Ammo_700NitroExpress_HE>
+		</products>
+		<workAmount>8800</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AdvancedAmmoRecipeBase">
+		<defName>MakeAmmo_700NitroExpress_Sabot</defName>
+		<label>make .700 Nitro Express (Sabot) cartridge x200</label>
+		<description>Craft 200 .700 Nitro Express (Sabot) cartridges.</description>
+		<jobString>Making .700 Nitro Express (Sabot) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Chemfuel</li>
+				<li>Steel</li>
+				<li>Uranium</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_700NitroExpress_Sabot>200</Ammo_700NitroExpress_Sabot>
+		</products>
+		<workAmount>5600</workAmount>
+	</RecipeDef>
+
+</Defs>
