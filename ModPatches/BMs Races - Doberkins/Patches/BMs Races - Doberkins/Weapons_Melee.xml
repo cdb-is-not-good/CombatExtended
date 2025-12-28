@@ -248,6 +248,13 @@
 					</capacities>
 					<power>65</power>
 					<cooldownTime>4</cooldownTime>
+					<extraMeleeDamages>
+					<li>
+						<def>KnockBackDamage_ImpactHammer</def>
+						<amount>20</amount>
+						<chance>0.8</chance>
+					</li>
+					</extraMeleeDamages>
 					<armorPenetrationBlunt>300</armorPenetrationBlunt>
 					<armorPenetrationSharp>0.2</armorPenetrationSharp>
 					<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
@@ -316,6 +323,11 @@
 							<amount>12</amount>
 							<chance>0.7</chance>
 						</li>
+						<li>
+							<def>Damage_ThermoBlade</def>
+							<amount>20</amount>
+							<chance>0.5</chance>
+						</li>
 					</extraMeleeDamages>
 					<chanceFactor>1</chanceFactor>
 				</li>
@@ -334,6 +346,11 @@
 							<def>Flame</def>
 							<amount>12</amount>
 							<chance>0.7</chance>
+						</li>
+						<li>
+							<def>Damage_ThermoBlade</def>
+							<amount>20</amount>
+							<chance>0.5</chance>
 						</li>
 					</extraMeleeDamages>
 					<chanceFactor>1.33</chanceFactor>
