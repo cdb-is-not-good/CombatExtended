@@ -19,12 +19,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Protectgear_BodyArmor"]/statBases</xpath>
 		<value>
 			<Bulk>10</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Protectgear_BodyArmor"]/statBases</xpath>
-		<value>
 			<WornBulk>6</WornBulk>
 		</value>
 	</Operation>
@@ -48,12 +42,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Protectgear_PauldronsBasic"]/statBases</xpath>
 		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Protectgear_PauldronsBasic"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
@@ -77,12 +65,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Protectgear_Pauldrons"]/statBases</xpath>
 		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Protectgear_Pauldrons"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
@@ -106,12 +88,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BallisticHelmet_Tactical"]/statBases</xpath>
 		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BallisticHelmet_Tactical"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
@@ -120,12 +96,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BallisticHelmet_Tactical"]/equippedStatOffsets</xpath>
 		<value>
 			<SmokeSensitivity>-1</SmokeSensitivity>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BallisticHelmet_Tactical"]/equippedStatOffsets</xpath>
-		<value>
 			<NightVisionEfficiency>0.6</NightVisionEfficiency>
 		</value>
 	</Operation>
@@ -149,12 +119,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BallisticHelmet_TacticalFacemask"]/statBases</xpath>
 		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BallisticHelmet_TacticalFacemask"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
@@ -163,12 +127,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BallisticHelmet_TacticalFacemask"]/equippedStatOffsets</xpath>
 		<value>
 			<SmokeSensitivity>-1</SmokeSensitivity>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BallisticHelmet_TacticalFacemask"]/equippedStatOffsets</xpath>
-		<value>
 			<NightVisionEfficiency>0.6</NightVisionEfficiency>
 		</value>
 	</Operation>
@@ -192,12 +150,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Balaclava_Reinforced"]/statBases</xpath>
 		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Balaclava_Reinforced"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
@@ -206,12 +158,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Balaclava_Reinforced"]/equippedStatOffsets</xpath>
 		<value>
 			<SmokeSensitivity>-1</SmokeSensitivity>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Balaclava_Reinforced"]/equippedStatOffsets</xpath>
-		<value>
 			<NightVisionEfficiency>0.6</NightVisionEfficiency>
 		</value>
 	</Operation>
@@ -235,12 +181,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Balaclava_Sniper"]/statBases</xpath>
 		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Balaclava_Sniper"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
@@ -249,12 +189,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Balaclava_Sniper"]/equippedStatOffsets</xpath>
 		<value>
 			<SmokeSensitivity>-1</SmokeSensitivity>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Balaclava_Sniper"]/equippedStatOffsets</xpath>
-		<value>
 			<NightVisionEfficiency>0.6</NightVisionEfficiency>
 		</value>
 	</Operation>
@@ -323,12 +257,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Jumpsuit"]/statBases</xpath>
 		<value>
 			<Bulk>10</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Jumpsuit"]/statBases</xpath>
-		<value>
 			<WornBulk>6</WornBulk>
 		</value>
 	</Operation>
@@ -352,12 +280,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_TacticalVest"]/statBases</xpath>
 		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_TacticalVest"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
@@ -381,12 +303,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BallisticHelmet"]/statBases</xpath>
 		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BallisticHelmet"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
@@ -417,12 +333,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BallisticHelmet_Facemask"]/statBases</xpath>
 		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BallisticHelmet_Facemask"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
@@ -453,12 +363,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BallisticHelmet_Melee"]/statBases</xpath>
 		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_BallisticHelmet_Melee"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
@@ -489,12 +393,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Balaclava"]/statBases</xpath>
 		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Balaclava"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
@@ -733,170 +631,55 @@
 
 <!-- === Heavy modular vest === -->
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName='Doberkin_Apparel_HeavyModularVest_A']</xpath>
-		<value><statBases></statBases></value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_HeavyModularVest_A"]/statBases</xpath>
 		<value>
 			<ArmorRating_Sharp>0.075</ArmorRating_Sharp>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_HeavyModularVest_A"]/statBases</xpath>
-		<value>
 			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_HeavyModularVest_A"]/statBases</xpath>
-		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_HeavyModularVest_A"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
 
 <!-- === Heavy modular vest T1 === -->
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName='Doberkin_Apparel_HeavyModularVest_B']</xpath>
-		<value><statBases></statBases></value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_HeavyModularVest_B"]/statBases</xpath>
 		<value>
 			<ArmorRating_Sharp>0.075</ArmorRating_Sharp>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_HeavyModularVest_B"]/statBases</xpath>
-		<value>
 			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_HeavyModularVest_B"]/statBases</xpath>
-		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_HeavyModularVest_B"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
 
 <!-- === Light modular vest === -->
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName='Doberkin_Apparel_LightModularVest']</xpath>
-		<value><statBases></statBases></value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_LightModularVest"]/statBases</xpath>
 		<value>
 			<ArmorRating_Sharp>0.075</ArmorRating_Sharp>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_LightModularVest"]/statBases</xpath>
-		<value>
 			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_LightModularVest"]/statBases</xpath>
-		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_LightModularVest"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
 
 <!-- === Magazine pouch === -->
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName='Doberkin_Apparel_MagazinePouches']</xpath>
-		<value><statBases></statBases></value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_MagazinePouches"]/statBases</xpath>
 		<value>
 			<ArmorRating_Sharp>0.075</ArmorRating_Sharp>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_MagazinePouches"]/statBases</xpath>
-		<value>
 			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_MagazinePouches"]/statBases</xpath>
-		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_MagazinePouches"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
 
 <!-- === Magazine pouch T1 === -->
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName='Doberkin_Apparel_MagazinePouches_WithFannyPack']</xpath>
-		<value><statBases></statBases></value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_MagazinePouches_WithFannyPack"]/statBases</xpath>
 		<value>
 			<ArmorRating_Sharp>0.075</ArmorRating_Sharp>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_MagazinePouches_WithFannyPack"]/statBases</xpath>
-		<value>
 			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_MagazinePouches_WithFannyPack"]/statBases</xpath>
-		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_MagazinePouches_WithFannyPack"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
@@ -920,12 +703,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_PoweredArmor"]/statBases</xpath>
 		<value>
 			<Bulk>10</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_PoweredArmor"]/statBases</xpath>
-		<value>
 			<WornBulk>6</WornBulk>
 		</value>
 	</Operation>
@@ -949,12 +726,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_PoweredHelmet"]/statBases</xpath>
 		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_PoweredHelmet"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
@@ -963,12 +734,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_PoweredHelmet"]/equippedStatOffsets</xpath>
 		<value>
 			<SmokeSensitivity>-1</SmokeSensitivity>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_PoweredHelmet"]/equippedStatOffsets</xpath>
-		<value>
 			<NightVisionEfficiency>0.6</NightVisionEfficiency>
 		</value>
 	</Operation>
@@ -1007,12 +772,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Pauldron"]/statBases</xpath>
 		<value>
 			<Bulk>10</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Pauldron"]/statBases</xpath>
-		<value>
 			<WornBulk>6</WornBulk>
 		</value>
 	</Operation>
@@ -1021,19 +780,7 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Pauldron"]/equippedStatOffsets</xpath>
 		<value>
 			<CarryBulk>5</CarryBulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Pauldron"]/equippedStatOffsets</xpath>
-		<value>
 			<CarryWeight>40</CarryWeight>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_Pauldron"]/equippedStatOffsets</xpath>
-		<value>
 			<ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
 		</value>
 	</Operation>
@@ -1072,12 +819,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_Jumpsuit"]/statBases</xpath>
 		<value>
 			<Bulk>10</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_Jumpsuit"]/statBases</xpath>
-		<value>
 			<WornBulk>6</WornBulk>
 		</value>
 	</Operation>
@@ -1101,12 +842,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_Helmet"]/statBases</xpath>
 		<value>
 			<Bulk>5</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_Helmet"]/statBases</xpath>
-		<value>
 			<WornBulk>3</WornBulk>
 		</value>
 	</Operation>
@@ -1115,12 +850,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_Helmet"]/equippedStatOffsets</xpath>
 		<value>
 			<SmokeSensitivity>-1</SmokeSensitivity>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_Helmet"]/equippedStatOffsets</xpath>
-		<value>
 			<NightVisionEfficiency>0.6</NightVisionEfficiency>
 		</value>
 	</Operation>
@@ -1144,12 +873,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_BodyArmor"]/statBases</xpath>
 		<value>
 			<Bulk>10</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_BodyArmor"]/statBases</xpath>
-		<value>
 			<WornBulk>6</WornBulk>
 		</value>
 	</Operation>
@@ -1173,12 +896,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_ShieldPauldron"]/statBases</xpath>
 		<value>
 			<Bulk>10</Bulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_ShieldPauldron"]/statBases</xpath>
-		<value>
 			<WornBulk>6</WornBulk>
 		</value>
 	</Operation>
@@ -1187,19 +904,7 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_ShieldPauldron"]/equippedStatOffsets</xpath>
 		<value>
 			<CarryBulk>5</CarryBulk>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_ShieldPauldron"]/equippedStatOffsets</xpath>
-		<value>
 			<CarryWeight>40</CarryWeight>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_ShieldCommander_ShieldPauldron"]/equippedStatOffsets</xpath>
-		<value>
 			<ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
 		</value>
 	</Operation>
@@ -1238,12 +943,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_RangedVisor"]/equippedStatOffsets</xpath>
 		<value>
 			<SmokeSensitivity>-1</SmokeSensitivity>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_RangedVisor"]/equippedStatOffsets</xpath>
-		<value>
 			<NightVisionEfficiency>0.6</NightVisionEfficiency>
 		</value>
 	</Operation>
@@ -1267,12 +966,6 @@
 		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_MeleeVisor"]/equippedStatOffsets</xpath>
 		<value>
 			<SmokeSensitivity>-1</SmokeSensitivity>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Doberkin_Apparel_MeleeVisor"]/equippedStatOffsets</xpath>
-		<value>
 			<NightVisionEfficiency>0.6</NightVisionEfficiency>
 		</value>
 	</Operation>
