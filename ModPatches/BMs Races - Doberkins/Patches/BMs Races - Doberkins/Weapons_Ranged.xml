@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+
+	<!-- ==========  Clean-Up =============-->
+		<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[
+			defName="Gun_DKF_ComradeArms" or
+			defName="Gun_DKF_CommanderSidearm" or
+			defName="Gun_DKF_Reprimand" or
+			defName="Gun_DKF_Cluster" or
+			defName="Gun_DKF_Mauler" or
+			defName="Gun_DKF_Breaker" or
+			defName="Gun_DKF_AT_Rifle" or
+			defName="Gun_DEF_HeartBurn" or
+			defName="Gun_DEF_HellFire" or
+			defName="Gun_DKF_HMG" or
+			defName="Gun_DEF_Lamcer" or
+			defName="Gun_DEF_RedGlare"
+			]/verbs</xpath>
+	</Operation>
+
+	<!-- Remove vanilla weaponTags that might conflict -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[
+			defName="Gun_DKF_ComradeArms" or
+			defName="Gun_DKF_CommanderSidearm" or
+			defName="Gun_DKF_Reprimand" or
+			defName="Gun_DKF_Cluster" or
+			defName="Gun_DKF_Mauler" or
+			defName="Gun_DKF_Breaker" or
+			defName="Gun_DKF_AT_Rifle" or
+			defName="Gun_DEF_HeartBurn" or
+			defName="Gun_DEF_HellFire" or
+			defName="Gun_DKF_HMG" or
+			defName="Gun_DEF_Lamcer" or
+			defName="Gun_DEF_RedGlare"
+			]/weaponTags</xpath>
+	</Operation>
+	
 	<!-- ==========  Melee Tools =========== -->
 
 	<!-- Pistols -->
@@ -121,7 +158,7 @@
 			<aiAimMode>AimedShot</aiAimMode>
 		</FireModes>
 		<weaponTags>
-			<li>CE_Sidearm</li>
+      		<li>DoberFirearms_KineticBasic</li>		
 			<li>CE_AI_Pistol</li>
 		</weaponTags>
 	</Operation>
@@ -159,6 +196,7 @@
 		</FireModes>
         <weaponTags>
             <li>CE_AI_AssaultWeapon</li>
+			<li>DoberFirearms_KineticBasic</li>
         </weaponTags>
 	</Operation>
 
@@ -194,6 +232,9 @@
 		</FireModes>
 		<weaponTags>
 			<li>CE_AI_Pistol</li>
+			<li>CE_OneHandedWeapon</li>
+			<li>DoberFirearms_KineticBasic</li>
+	  		<li>Comrade</li>
 		</weaponTags>
 	</Operation>
 
@@ -233,6 +274,7 @@
 			</FireModes>
 			<weaponTags>
 				<li>CE_AI_Rifle</li>
+				<li>DoberFirearms_KineticAdvanced</li>
         	</weaponTags>
 	</Operation>
 
@@ -273,6 +315,7 @@
         <weaponTags>
             <li>CE_AI_Suppressive</li>
             <li>Bipod_LMG</li>
+     		<li>DoberFirearms_KineticAdvanced_MG</li>
         </weaponTags>
 	</Operation>
 
@@ -309,6 +352,7 @@
         <weaponTags>
             <li>CE_AI_SR</li>
             <li>Bipod_ATR</li>
+			<li>DoberFirearms_KineticAdvanced_Sniper</li>
         </weaponTags>
 	</Operation>
 
@@ -583,6 +627,15 @@
 		</FireModes>
 		<weaponTags>
 			<li>CE_AI_Pistol</li>
+			<li>CE_OneHandedWeapon</li>
 		</weaponTags>
+	</Operation>
+
+<!-- ==========  Damage Defs  =========== -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/DamageDef[defName="Damage_HMG"]/label</xpath>
+		<value>
+			<label>Gyrojet</label>
+		</value>
 	</Operation>
 </Patch>
