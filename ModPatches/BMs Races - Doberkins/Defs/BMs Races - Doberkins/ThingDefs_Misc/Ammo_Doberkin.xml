@@ -81,6 +81,7 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Bullet</damageDef>
 			<speed>85</speed>
+			<trajectoryWorker>CombatExtended.SmartRocketTrajectoryWorker</trajectoryWorker>
 		</projectile>
 		<comps>
 			<li Class="CombatExtended.CompProperties_ProjectileFleck">
@@ -274,6 +275,8 @@
 		<ammoTypes>
 			<Ammo_12mmSmartGyrojet_FMJ>Bullet_12mmSmartGyrojet_FMJ</Ammo_12mmSmartGyrojet_FMJ>
 			<Ammo_12mmSmartGyrojet_AP>Bullet_12mmSmartGyrojet_AP</Ammo_12mmSmartGyrojet_AP>
+			<Ammo_12mmSmartGyrojet_Incendiary>Bullet_12mmSmartGyrojet_Incendiary</Ammo_12mmSmartGyrojet_Incendiary>
+			<Ammo_12mmSmartGyrojet_HE>Bullet_12mmSmartGyrojet_HE</Ammo_12mmSmartGyrojet_HE>
 		</ammoTypes>
 	</CombatExtended.AmmoSetDef>
 
@@ -316,6 +319,29 @@
 		<cookOffProjectile>Bullet_12mmSmartGyrojet_AP</cookOffProjectile>
 	</ThingDef>
 
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="12mmSmartGyrojetBase">
+		<defName>Ammo_12mmSmartGyrojet_Incendiary</defName>
+		<label>12mm Smart rocket (Incendiary AP)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>IncendiaryAP</ammoClass>
+		<cookOffProjectile>Bullet_12mmSmartGyrojet_Incendiary</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="12mmSmartGyrojetBase">
+		<defName>Ammo_12mmSmartGyrojet_HE</defName>
+		<label>12mm Smart rocket (HE)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/HE</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>ExplosiveAP</ammoClass>
+		<cookOffProjectile>Bullet_12mmSmartGyrojet_HE</cookOffProjectile>
+	</ThingDef>
+
+
 	<!-- ================== Projectiles ================== -->
 
 	<ThingDef Class="CombatExtended.AmmoDef" Name="Base12mmSmartGyrojetBullet" ParentName="Base45ACPBullet" Abstract="true">
@@ -327,6 +353,7 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Damage_HMG</damageDef>
 			<speed>105</speed>
+			<trajectoryWorker>CombatExtended.SmartRocketTrajectoryWorker</trajectoryWorker>
 		</projectile>
 		<comps>
 			<li Class="CombatExtended.CompProperties_ProjectileFleck">
@@ -378,6 +405,38 @@
 			<damageAmountBase>12</damageAmountBase>
 			<armorPenetrationSharp>20</armorPenetrationSharp>
 			<armorPenetrationBlunt>30.4</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base12mmSmartGyrojetBullet">
+		<defName>Bullet_12mmSmartGyrojet_Incendiary</defName>
+		<label>12mm Smart bullet (Armory-Piercing Incendiary)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>12</damageAmountBase>
+			<armorPenetrationSharp>20</armorPenetrationSharp>
+			<armorPenetrationBlunt>30.4</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>4</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base12mmSmartGyrojetBullet">
+		<defName>Bullet_12mmSmartGyrojet_HE</defName>
+		<label>12mm Smart bullet (HE)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>15</damageAmountBase>
+			<armorPenetrationSharp>10</armorPenetrationSharp>
+			<armorPenetrationBlunt>30.4</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>Bomb_Secondary</def>
+					<amount>4</amount>
+				</li>
+			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 
@@ -449,6 +508,94 @@
 		</fixedIngredientFilter>
 		<products>
 			<Ammo_12mmSmartGyrojet_AP>200</Ammo_12mmSmartGyrojet_AP>
+		</products>
+		<workAmount>2400</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_12mmSmartGyrojet_Incendiary</defName>
+		<label>make 12mm Smart (Incendiary) rocket x200</label>
+		<description>Craft 200 12mm Smart (Incendiary) rockets.</description>
+		<jobString>Making 12mm Smart (Incendiary) rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Prometheum</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+				<li>Prometheum</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_12mmSmartGyrojet_Incendiary>200</Ammo_12mmSmartGyrojet_Incendiary>
+		</products>
+		<workAmount>2400</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_12mmSmartGyrojet_HE</defName>
+		<label>make 12mm Smart (HE) rocket x200</label>
+		<description>Craft 200 12mm Smart (HE) rockets.</description>
+		<jobString>Making 12mm Smart (HE) rockets.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+							<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+				<li>FSX</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_12mmSmartGyrojet_HE>200</Ammo_12mmSmartGyrojet_HE>
 		</products>
 		<workAmount>2400</workAmount>
 	</RecipeDef>
